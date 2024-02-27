@@ -1,5 +1,8 @@
-import { Center, Container, Flex } from "@chakra-ui/react";
+import { Box, Center, Container, Flex, Image, VStack } from "@chakra-ui/react";
 import React from "react";
+import AuthForm from "../Components/AuthForm/AuthForm";
+
+
 
 const AuthPage = () => {
   return (
@@ -13,7 +16,14 @@ const AuthPage = () => {
         <Container maxW={"container.md"} padding={0}>
           {/* left handside */}
 
-         
+         <Box display={{base:'none',md:'block'}}>
+          <Image />
+          {/* right side */}
+          <VStack spacing={4} align={"stretch"}>
+        <AuthForm/>
+
+          </VStack>
+         </Box>
         </Container>
       </Flex>
     </div>
